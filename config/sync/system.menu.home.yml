@@ -1,0 +1,8 @@
+uuid: b4b08b70-41a1-4aa6-acac-666206cae384
+langcode: en
+status: true
+dependencies: {  }
+id: home
+label: Home
+description: ''
+locked: false

@@ -1,0 +1,8 @@
+uuid: ab36adf5-8ac7-4ff4-ba3e-6dd879f85b8f
+langcode: en
+status: true
+dependencies: {  }
+name: Specialty
+vid: specialty
+description: 'Field of work'
+weight: 0

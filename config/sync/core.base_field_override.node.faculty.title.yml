@@ -1,0 +1,18 @@
+uuid: db284d1a-8f37-4089-bc4b-a983a51753e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.faculty
+id: node.faculty.title
+field_name: title
+entity_type: node
+bundle: faculty
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

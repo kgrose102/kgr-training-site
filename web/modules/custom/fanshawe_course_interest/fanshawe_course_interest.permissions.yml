@@ -1,0 +1,8 @@
+view fanshawe course interest form:
+  title: 'View Fanshawe Course Interest Form'
+  description: 'View and submit to the fanshawe course interest form'
+
+administer fanshawe course interest settings:
+  title: 'Administer Fanshawe Course Onterset Settings'
+  description: 'Access the fanshawe Course Interset administrations settings'
+  restrict access: TRUE

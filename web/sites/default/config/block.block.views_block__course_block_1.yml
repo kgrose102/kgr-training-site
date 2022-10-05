@@ -1,0 +1,37 @@
+uuid: 528f7d0e-1bef-4f43-99e3-dffc10fe6b99
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__course_block_1
+theme: bartik
+region: content
+weight: -2
+provider: null
+plugin: 'views_block:course-block_1'
+settings:
+  id: 'views_block:course-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      course: course

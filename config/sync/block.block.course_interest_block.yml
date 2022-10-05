@@ -1,0 +1,20 @@
+uuid: 579977e7-9c32-4a7a-a6de-3953e1902805
+langcode: en
+status: true
+dependencies:
+  module:
+    - fanshawe_course_interest
+  theme:
+    - custom_theme
+id: course_interest_block
+theme: custom_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: course_interest_block
+settings:
+  id: course_interest_block
+  label: 'Course Interest Block'
+  label_display: visible
+  provider: fanshawe_course_interest
+visibility: {  }

@@ -1,0 +1,101 @@
+<?php
+
+use Drupal\Core\Entity\EntityFormInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+
+/**
+ * @file
+ * provides functionaly for the my first Module module
+ */
+
+/**
+* Implements hook_form_BASE_FORM_ID_alter() as hook_form_node_form_alter().
+*/
+function fanshawe_course_interest_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    $config_factory = \Drupal::service('config.factory');
+    $current_route_match = \Drupal::service('current_route_match');
+    $course_interest_config = $config_factory->get('fanshawe_course_interest.settings');
+    $course_interest_content_types = $course_interest_config->get('content_types');
+
+    $node = $current_route_match->getParameter('node');
+    if (!empty($node)) {
+        $bundle = $node->bundle();
+    }
+    else {
+        $bundle = $current_route_match->getParameter('node_type')->get('type');
+    }
+
+    if (
+        isset($course_interest_content_types) &&
+        in_array($bundle, $course_interest_content_types)
+        ) {
+        /******************************
+         * Course Interest
+         ******************************/
+        $form['course_interest'] = [
+            '#type' => 'details',
+            '#title' => t('Course Interest'),
+            '#group' => 'advanced',
+            '#weight' => 99,
+            '#optional' => TRUE,
+        ];
+    
+        /******************************
+         * Course Interest Enabled
+         ******************************/
+        $form['course_interest_enabled'] = [
+            '#type' => 'checkbox',
+            '#title' => t('Enable Course Interest for this node.'),
+            '#default_value' => _fanshawe_course_interest_get_course_interest_enabled($node),
+            '#group' => 'course_interest',
+        ];
+    
+        array_unshift($form['actions']['submit']['#submit'], '_fanshawe_course_interest_course_interest_submit_handler');
+    }        
+}
+
+/**
+ * Helper Function to do something
+ */
+function _fanshawe_course_interest_course_interest_submit_handler(array $form, FormStateInterface &$form_state) {
+    $database = \Drupal::service('database');
+  $course_interest_enabled = $form_state->getValue('course_interest_enabled');
+
+  if ($form_state->getFormObject() instanceOf EntityFormInterface) {
+    $nid = $form_state->getformObject()->getEntity()->id();
+
+    if ($course_interest_enabled) {
+      $database->insert('fanshawe_course_interest_enabled')
+        ->fields([
+          'nid' => $nid,
+          'created' => time(),
+        ])
+        ->execute();
+    }
+    else {
+      $database->delete('fanshawe_course_interest_enabled')
+        ->condition('nid', $nid)
+        ->execute();
+    }
+  }
+}
+
+function _fanshawe_course_interest_get_course_interest_enabled($node) {
+    $database = \Drupal::service('database');
+    $is_enabled = FALSE;
+  
+    if ($node instanceof NodeInterface) {
+      $query = $database->select('fanshawe_course_interest_enabled', 'fcie');
+      $query->addField('fcie', 'nid');
+      $query->condition('fcie.nid', $node->id());
+      $results = $query->execute()->fetchAll();
+  
+      if (!empty($results)) {
+        $is_enabled = TRUE;
+      }
+    }
+  
+    return $is_enabled;
+}
+  

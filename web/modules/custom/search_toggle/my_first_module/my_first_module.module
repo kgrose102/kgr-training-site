@@ -1,0 +1,24 @@
+<?php
+
+/**
+*@file
+*
+*Provides functionality for My First Module Module
+*/
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+*Implements hook_form_alter().
+*
+* detailed desription here
+*/
+function my_first_module_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+    ksm('C1', 'In the form alter');
+
+    switch ($form_id) {
+        case 'node_page_edit_form':
+            ksm('C2', $form_id, $form, $form_state);
+            break;
+    }
+}

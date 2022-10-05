@@ -1,0 +1,44 @@
+uuid: 9c0a5ec1-1030-4161-9130-5f5da995d193
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialty
+  module:
+    - path
+    - text
+id: taxonomy_term.specialty.default
+targetEntityType: taxonomy_term
+bundle: specialty
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden: {  }
