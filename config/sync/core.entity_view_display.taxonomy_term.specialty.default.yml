@@ -1,0 +1,21 @@
+uuid: 780f764a-4afd-4e4c-ac2b-b823dab81281
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.specialty
+  module:
+    - text
+id: taxonomy_term.specialty.default
+targetEntityType: taxonomy_term
+bundle: specialty
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

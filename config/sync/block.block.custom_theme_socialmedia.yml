@@ -1,0 +1,25 @@
+uuid: b7372b2e-9032-487f-a017-8868e131776a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3543eacb-cace-4dd7-9ab0-08850c5546fe'
+  module:
+    - block_content
+  theme:
+    - custom_theme
+id: custom_theme_socialmedia
+theme: custom_theme
+region: footer_second
+weight: -8
+provider: null
+plugin: 'block_content:3543eacb-cace-4dd7-9ab0-08850c5546fe'
+settings:
+  id: 'block_content:3543eacb-cace-4dd7-9ab0-08850c5546fe'
+  label: 'Social Media'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

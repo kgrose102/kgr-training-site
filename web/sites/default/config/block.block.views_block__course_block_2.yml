@@ -1,0 +1,30 @@
+uuid: e3fcbc7b-83e4-44b2-a673-1eb599030a19
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.course
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__course_block_2
+theme: bartik
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:course-block_2'
+settings:
+  id: 'views_block:course-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

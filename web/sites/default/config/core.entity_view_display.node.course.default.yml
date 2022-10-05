@@ -1,0 +1,218 @@
+uuid: 176f8b47-948d-4559-ad92-c1c966c5541c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.course.body
+    - field.field.node.course.field_course_category
+    - field.field.node.course.field_course_name
+    - field.field.node.course.field_duration
+    - field.field.node.course.field_end_date
+    - field.field.node.course.field_start_date
+    - field.field.node.course.field_teacher_s_
+    - node.type.course
+  module:
+    - datetime
+    - layout_builder
+    - layout_discovery
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          194f0ed6-b1bc-4431-89a2-84ced32722da:
+            uuid: 194f0ed6-b1bc-4431-89a2-84ced32722da
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_duration'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          65dc0d4e-15f6-42d2-8cdb-f685cccf3ab6:
+            uuid: 65dc0d4e-15f6-42d2-8cdb-f685cccf3ab6
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_start_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          e4a440d7-9488-40c8-8ee6-164b6e480e6b:
+            uuid: e4a440d7-9488-40c8-8ee6-164b6e480e6b
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_end_date'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: above
+                settings:
+                  timezone_override: ''
+                  format_type: medium
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          61401181-df8d-45b0-ae4c-4608ae25e969:
+            uuid: 61401181-df8d-45b0-ae4c-4608ae25e969
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_teacher_s_'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          cdcc9a86-bb72-406c-aeff-d968a6f1ad6b:
+            uuid: cdcc9a86-bb72-406c-aeff-d968a6f1ad6b
+            region: content
+            configuration:
+              id: 'extra_field_block:node:course:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 9
+            additional: {  }
+          177387f0-af9d-465c-ac37-0f9e81b8505c:
+            uuid: 177387f0-af9d-465c-ac37-0f9e81b8505c
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_course_category'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          361e21ea-7cd7-4036-8d3f-5ef2444803cd:
+            uuid: 361e21ea-7cd7-4036-8d3f-5ef2444803cd
+            region: content
+            configuration:
+              id: 'field_block:node:course:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 8
+            additional: {  }
+          06257ac2-1981-4d9b-976b-5b4f7b15cc64:
+            uuid: 06257ac2-1981-4d9b-976b-5b4f7b15cc64
+            region: content
+            configuration:
+              id: 'field_block:node:course:field_course_name'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+id: node.course.default
+targetEntityType: node
+bundle: course
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_course_category:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_course_name:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_duration:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_end_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_start_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_teacher_s_:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

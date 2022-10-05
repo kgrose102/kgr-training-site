@@ -1,23 +1,28 @@
-# Composer-enabled Drupal template
+# Drupal with Composer Northern Commerce training site
 
-This is Pantheon's recommended starting point for forking new [Drupal](https://www.drupal.org/) upstreams
-that work with the Platform's Integrated Composer build process. It is also the
-Platform's standard Drupal 9 upstream.
+## About
 
-Unlike with earlier Pantheon upstreams, files such as Drupal Core that you are
-unlikely to adjust while building sites are not in the main branch of the 
-repository. Instead, they are referenced as dependencies that are installed by
-Composer.
+This project was created during a 9 week collaboration course between Nothern Commerce and Fanshawe College.
+The course focused on [Drupal 9](https://www.drupal.org/) it explored setup using Composer, Taxonomy, Vocabulary, Theming with Twig and bootstrap, as well as creating a custom module
+The project was created using [Pantheon](https://www.Pantheon.io) as the original hosting, with computer backend using [MAMP](https://www.mamp.info/), or [WAMP](https://www.wampserver.com/)
 
-For more information and detailed installation guides, please visit the
-Integrated Composer Pantheon documentation: https://pantheon.io/docs/integrated-composer
+## To Run Site
 
-## Contributing
+- Clone the repo into your hosting enviroment, whether WSL, MAMP, WAMP, or other and add the site as you normally would
+- Create a database in your SQL service called "nother-db"
+  - If you need to update the port, login information or change the database name you can find the required file at:
 
-Contributions are welcome in the form of GitHub pull requests. However, the
-`pantheon-upstreams/drupal-project` repository is a mirror that does not
-directly accept pull requests.
+    ``` sh
+    kgr-training-site/web/sites/default/settings.local.php
+    ```
 
-Instead, to propose a change, please fork [pantheon-systems/drupal-project](https://github.com/pantheon-systems/drupal-project)
-and submit a PR to that repository.
-# kgr-training-site
+- open the site using your dev enviroment
+  - you may presented a listing of the folders, if this is the case navigate to
+
+    ```sh
+    web/
+    ```
+
+## Constrants
+
+- Requires a dev enviroment with PHP 7.4 or newer. 8.1 is recommended

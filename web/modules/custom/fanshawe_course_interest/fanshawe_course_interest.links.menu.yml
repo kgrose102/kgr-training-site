@@ -1,0 +1,6 @@
+fanshawe_course_interest.settings:
+  title: 'Fanshawe Course Interest Settings'
+  parent: system.admin_content
+  route_name: fanshawe_course_interest.settings
+  weight: 99
+  menu_name: system

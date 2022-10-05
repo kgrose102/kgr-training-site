@@ -1,0 +1,8 @@
+uuid: fd1ad962-9efe-4014-93c2-0660ebcaa143
+langcode: en
+status: true
+dependencies: {  }
+id: courses
+label: Courses
+description: ''
+locked: false

@@ -1,0 +1,29 @@
+uuid: 74c1fdfa-c801-4764-9a77-9d33f18b8cb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_specialty
+    - node.type.faculty
+    - taxonomy.vocabulary.specialty
+id: node.faculty.field_specialty
+field_name: field_specialty
+entity_type: node
+bundle: faculty
+label: Specialty
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      specialty: specialty
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

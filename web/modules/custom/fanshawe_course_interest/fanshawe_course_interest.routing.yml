@@ -1,0 +1,15 @@
+fanshawe_course_interest.form:
+  path: '/course-interest'
+  defaults:
+    _title: 'Fanshawe Course Interest Form'
+    _form: '\Drupal\fanshawe_course_interest\Form\CourseInterestForm'
+  requirements:
+    _permission: 'view fanshawe course interest form'
+
+fanshawe_course_interest.settings:
+  path: '/admin/content/fanshawe-course-interest-settings'
+  defaults:
+    _title: 'Fanshawe Course Interest Settings'
+    _form: '\Drupal\fanshawe_course_interest\Form\CourseInterestSettingsForm'
+  requirements:
+    _permission: 'administer fanshawe course interest settings'

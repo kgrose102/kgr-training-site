@@ -1,0 +1,29 @@
+uuid: c7d6601b-66d5-402b-8122-03eb6b89fd07
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.max_650x650
+  theme:
+    - custom_theme
+id: teaser_image
+label: 'Teaser Image'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: custom_theme.medium_full
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: max_650x650
+    breakpoint_id: custom_theme.small_mid
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: large
+    breakpoint_id: custom_theme.x_small
+    multiplier: 1x
+breakpoint_group: custom_theme
+fallback_image_style: large

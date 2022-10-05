@@ -1,0 +1,5 @@
+name: 'Fanshawe Course Interest'
+type: module
+description: 'Allows users to indicate interest for Courses and provides a contact list for Administrators'
+package: 'Fanshawe'
+core_version_requirement: ^8 || ^9

@@ -1,0 +1,68 @@
+<?php
+
+/**
+ * @file
+ *
+ * Provides installation and update hooks for the Fanshawe Course Interest module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function fanshawe_course_interest_schema() {
+  $schema = [];
+
+  /******************************
+   * Fanshawe Course Interest List
+   ******************************/
+  $schema['fanshawe_course_interest_list'] = [
+    'description' => 'A list of submissions for the Fanshawe Course Interest Form.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'nid' => [
+        'type' => 'int',
+        'not null' => FALSE,
+      ],
+      'mail' => [
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  /******************************
+   * Fanshawe Course Interest Enabled
+   ******************************/
+  $schema['fanshawe_course_interest_enabled'] = [
+    'description' => 'Contains nodes that have the Fanshawe Course Interest enabled.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'nid' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+      'created' => [
+        'type' => 'int',
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

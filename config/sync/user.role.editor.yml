@@ -1,0 +1,88 @@
+uuid: 7a411e80-f0f9-4696-8235-4e0d0da3957b
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+    - node.type.article
+    - node.type.course
+    - node.type.faculty
+    - node.type.page
+    - taxonomy.vocabulary.certification
+    - taxonomy.vocabulary.course_category
+    - taxonomy.vocabulary.specialty
+    - taxonomy.vocabulary.tags
+  module:
+    - comment
+    - contextual
+    - file
+    - filter
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+    - tour
+id: editor
+label: Editor
+weight: -8
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access toolbar'
+  - 'access tour'
+  - 'administer url aliases'
+  - 'create article content'
+  - 'create course content'
+  - 'create faculty content'
+  - 'create page content'
+  - 'create terms in certification'
+  - 'create terms in course_category'
+  - 'create terms in specialty'
+  - 'create terms in tags'
+  - 'create url aliases'
+  - 'delete any article content'
+  - 'delete any course content'
+  - 'delete any faculty content'
+  - 'delete any page content'
+  - 'delete article revisions'
+  - 'delete course revisions'
+  - 'delete faculty revisions'
+  - 'delete own article content'
+  - 'delete own course content'
+  - 'delete own faculty content'
+  - 'delete own page content'
+  - 'delete page revisions'
+  - 'delete terms in certification'
+  - 'delete terms in course_category'
+  - 'delete terms in specialty'
+  - 'delete terms in tags'
+  - 'edit any article content'
+  - 'edit any course content'
+  - 'edit any faculty content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own comments'
+  - 'edit own course content'
+  - 'edit own faculty content'
+  - 'edit own page content'
+  - 'edit terms in certification'
+  - 'edit terms in course_category'
+  - 'edit terms in specialty'
+  - 'edit terms in tags'
+  - 'revert all revisions'
+  - 'revert article revisions'
+  - 'revert course revisions'
+  - 'revert faculty revisions'
+  - 'revert page revisions'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view article revisions'
+  - 'view course revisions'
+  - 'view faculty revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'

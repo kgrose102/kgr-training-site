@@ -1,0 +1,219 @@
+uuid: 65cd96b3-ef85-4cf7-95d4-870fd126caa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.faculty.body
+    - field.field.node.faculty.field_certifications
+    - field.field.node.faculty.field_email
+    - field.field.node.faculty.field_image
+    - field.field.node.faculty.field_job_title
+    - field.field.node.faculty.field_phone_number
+    - field.field.node.faculty.field_specialty
+    - node.type.faculty
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          4af6860c-2dfd-4734-a90b-fcce0f975611:
+            uuid: 4af6860c-2dfd-4734-a90b-fcce0f975611
+            region: content
+            configuration:
+              id: 'extra_field_block:node:faculty:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 8
+            additional: {  }
+          43bd8b4c-cf96-4f52-ae05-67c4179eb489:
+            uuid: 43bd8b4c-cf96-4f52-ae05-67c4179eb489
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          03ec0158-c3f6-40d0-8627-5f60934791c9:
+            uuid: 03ec0158-c3f6-40d0-8627-5f60934791c9
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_email'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: basic_string
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          b57f193d-50be-403f-a1d1-9c5b3f986f21:
+            uuid: b57f193d-50be-403f-a1d1-9c5b3f986f21
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          2a21dd77-016d-4df5-9433-51c3a75f13a6:
+            uuid: 2a21dd77-016d-4df5-9433-51c3a75f13a6
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_job_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          14a1660b-edaa-4f95-a010-01fad6ccdd69:
+            uuid: 14a1660b-edaa-4f95-a010-01fad6ccdd69
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_specialty'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          df9914e6-b0f4-4863-a26a-7dcf67930d08:
+            uuid: df9914e6-b0f4-4863-a26a-7dcf67930d08
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_certifications'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          96485429-3d39-49f6-bdcd-b08cfb423918:
+            uuid: 96485429-3d39-49f6-bdcd-b08cfb423918
+            region: content
+            configuration:
+              id: 'field_block:node:faculty:field_phone_number'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: number_integer
+                label: hidden
+                settings:
+                  thousand_separator: ''
+                  prefix_suffix: true
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+        third_party_settings: {  }
+id: node.faculty.default
+targetEntityType: node
+bundle: faculty
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_certifications:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_email:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_phone_number:
+    type: number_integer
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_specialty:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

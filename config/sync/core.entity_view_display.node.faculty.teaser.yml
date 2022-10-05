@@ -1,0 +1,47 @@
+uuid: bc9ad1ba-eeb6-4555-a95a-f96ae68c0e52
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.faculty.body
+    - field.field.node.faculty.field_certifications
+    - field.field.node.faculty.field_email
+    - field.field.node.faculty.field_image
+    - field.field.node.faculty.field_job_title
+    - field.field.node.faculty.field_phone_number
+    - field.field.node.faculty.field_specialty
+    - node.type.faculty
+    - responsive_image.styles.teaser_image
+  module:
+    - responsive_image
+    - user
+id: node.faculty.teaser
+targetEntityType: node
+bundle: faculty
+mode: teaser
+content:
+  field_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: teaser_image
+      image_link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_job_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  body: true
+  field_certifications: true
+  field_email: true
+  field_phone_number: true
+  field_specialty: true
+  links: true

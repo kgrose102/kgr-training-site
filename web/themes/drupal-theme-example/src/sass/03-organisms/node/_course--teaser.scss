@@ -1,0 +1,24 @@
+.node--type-course.node--view-mode-teaser{
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #D0D2D9;
+    padding: rem(30);
+    margin-bottom: ren(10);
+
+    .content-left{
+
+        flex: 1 1 100%;
+
+    
+    }
+
+    .content-right{
+
+        flex: 1 1 100%;
+
+    }
+
+}
+
+
+
