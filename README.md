@@ -10,7 +10,13 @@ The project was created using [Pantheon](https://www.Pantheon.io) as the origina
 
 - Clone the repo into your hosting enviroment, whether WSL, MAMP, WAMP, or other and add the site as you normally would
 - Create a database in your SQL service called "nother-db"
-  - If you need to update the port, login information or change the database name you can find the required file at:
+  - import the database located inside
+
+    ```sh
+    kgr-training-site/database/
+    ```
+
+  - If you need to update the port, login information or change the database name you can find the local setting file at:
 
     ``` sh
     kgr-training-site/web/sites/default/settings.local.php
@@ -25,4 +31,5 @@ The project was created using [Pantheon](https://www.Pantheon.io) as the origina
 
 ## Constrants
 
-- Requires a dev enviroment with PHP 7.4 or newer. 8.1 is recommended
+- Requires a dev enviroment with PHP 7.4 or newer
+  - PHP 8.1 is recommended
